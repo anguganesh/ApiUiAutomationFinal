@@ -1,6 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>uiApiAutomation</groupId>
@@ -54,7 +52,7 @@
 			<!-- N Feature files at a time / defined in threadCount attribute -->
 			<!-- R times retry mentioned in  rerunFailingTestsCount attribute -->
 
-		  <!-- <plugin>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>${maven.surefire.plugin.version}</version>
@@ -78,12 +76,12 @@
 						<allure.results.directory>${project.build.directory}/AllureReport</allure.results.directory>
 					</systemPropertyVariables>
 				</configuration>
-			</plugin> -->
+			</plugin>
 
 
 			<!-- To Run Using TestNG from POM -->
 			<!-- N Scenarios at a time / change data-provider-thread-count attribute 
-				value in tesstng.xml file -->
+				value in testng.xml file -->
 
 
 			<plugin>
@@ -247,8 +245,6 @@
 		</dependency>
 
 		<!-- End of Spring Boot -->
-
-
 
 
 	</dependencies>
