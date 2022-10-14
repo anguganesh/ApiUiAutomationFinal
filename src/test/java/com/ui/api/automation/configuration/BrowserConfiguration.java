@@ -32,20 +32,21 @@ public class BrowserConfiguration {
 		this.reportConfiguration = allureReportConfiguration;
 	}
 	
-	@Before
-	public void openBrowser(Scenario scenario) {
-		
-
+	@Before(order = 0)
+	public void configureFilePathLocation()  {
 		ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(ObjectConfig.class);
 		this.yamlFilePath = context.getBean(YamlFilePath.class); 
 		this.jsonFilePath = context.getBean(JsonFilePath.class);
-		
-			
+		hooks.setFilePathLocation(this.yamlFilePath, this.jsonFilePath);
+	}
+	
+	@Before(order = 1)
+	public void openBrowser(Scenario scenario) {			
 		System.out.println("scenario Name : " + scenario.getName());
 		System.out.println("Thread : " + Thread.currentThread().getId());
     	System.out.println("Driver Address Initial : " + hooks.getDriver());
 
-    	hooks.launchBrowser(this.yamlFilePath, this.jsonFilePath);
+    	hooks.launchBrowser();
 		System.out.println("Driver Address after creating : " + hooks.getDriver());
 	}
 

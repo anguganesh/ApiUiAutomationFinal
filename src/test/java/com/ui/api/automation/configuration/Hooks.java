@@ -37,10 +37,14 @@ public class Hooks {
 		this.yamlHelper = yamlHelper;
 	}
 
-	public WebDriver launchBrowser(YamlFilePath yamlFilePathObject,
-								   JsonFilePath jsonFilePathObject ) {
+	public void setFilePathLocation(YamlFilePath yamlFilePathObject,
+			   						JsonFilePath jsonFilePathObject ) {
 		this.yamlFilePath = yamlFilePathObject;
-		this.jsonFilePath = jsonFilePathObject;
+		this.jsonFilePath = jsonFilePathObject;	
+	}
+	
+	public WebDriver launchBrowser() {
+
 		if (this.driver == null)
 			initializeDriver();
 		return driver;
