@@ -1,0 +1,255 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>uiApiAutomation</groupId>
+	<artifactId>uiApiAutomation</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>uiApiAutomation</name>
+	<url>http://maven.apache.org</url>
+
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.cucumber.version>7.5.0</maven.cucumber.version>
+		<maven.cucumber.jvm.deps>1.0.6</maven.cucumber.jvm.deps>
+		<maven.junit.version>4.13.2</maven.junit.version>
+		<maven.cucumber.junit.version>7.5.0</maven.cucumber.junit.version>
+		<maven.testng.version>7.4.0</maven.testng.version>
+		<maven.cucumber.testng.version>7.5.0</maven.cucumber.testng.version>
+		<maven.cucumber.selenium.version>4.5.0</maven.cucumber.selenium.version>
+		<maven.cucumber.webdriver.version>5.3.0</maven.cucumber.webdriver.version>
+		<maven.compiler.plugin.version>3.10.1</maven.compiler.plugin.version>
+		<maven.surefire.plugin.version>3.0.0-M7</maven.surefire.plugin.version>
+		<maven.fasterxml.jackson.version>2.13.4</maven.fasterxml.jackson.version>
+		<maven.allure.cucumber.jvm.version>2.19.0</maven.allure.cucumber.jvm.version>
+		<maven.extent.report.cucumber.adapter>1.7.0</maven.extent.report.cucumber.adapter>
+		<maven.extent.report.version>5.0.9</maven.extent.report.version>
+		<maven.lombok.version>1.18.24</maven.lombok.version>
+		<maven.spring.boot.version>2.7.4</maven.spring.boot.version>
+	</properties>
+
+
+	<build>
+		<plugins>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven.compiler.plugin.version}</version>
+				<configuration>
+					<source>${maven.compiler.source}</source>
+					<target>${maven.compiler.target}</target>
+					<encoding>${project.build.sourceEncoding}</encoding>
+				</configuration>
+
+			</plugin>
+
+			<!-- To Run Using JUnit from POM -->
+			<!-- N Feature files at a time / defined in threadCount attribute -->
+			<!-- R times retry mentioned in  rerunFailingTestsCount attribute -->
+
+		  <!-- <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>${maven.surefire.plugin.version}</version>
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.maven.surefire</groupId>
+						<artifactId>surefire-junit47</artifactId>
+						<version>${maven.surefire.plugin.version}</version>
+					</dependency>
+				</dependencies>
+				<configuration>
+					<rerunFailingTestsCount>1</rerunFailingTestsCount>
+					<testFailureIgnore>false</testFailureIgnore>
+					<parallel>methods</parallel>
+					<threadCount>3</threadCount>
+					<perCoreThreadCount>false</perCoreThreadCount>
+					<includes>
+						<include>**/*JUnitRunner.java</include>
+					</includes>
+					<systemPropertyVariables>
+						<allure.results.directory>${project.build.directory}/AllureReport</allure.results.directory>
+					</systemPropertyVariables>
+				</configuration>
+			</plugin> -->
+
+
+			<!-- To Run Using TestNG from POM -->
+			<!-- N Scenarios at a time / change data-provider-thread-count attribute 
+				value in tesstng.xml file -->
+
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>${maven.surefire.plugin.version}</version>
+				<configuration>
+					<suiteXmlFiles>
+						<suiteXmlFile>testng.xml</suiteXmlFile>
+					</suiteXmlFiles>
+					<systemPropertyVariables>
+						<allure.results.directory>${project.build.directory}/AllureReport</allure.results.directory>
+					</systemPropertyVariables>
+				</configuration>
+			</plugin>
+
+
+		</plugins>
+	</build>
+
+
+	<dependencies>
+
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>${maven.cucumber.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-core</artifactId>
+			<version>${maven.cucumber.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-jvm</artifactId>
+			<version>${maven.cucumber.version}</version>
+			<type>pom</type>
+		</dependency>
+
+
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-picocontainer</artifactId>
+			<version>${maven.cucumber.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-java8</artifactId>
+			<version>${maven.cucumber.version}</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-jvm-deps</artifactId>
+			<version>${maven.cucumber.jvm.deps}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- TestNG Version -->
+
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>${maven.testng.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-testng</artifactId>
+			<version>${maven.cucumber.testng.version}</version>
+		</dependency>
+
+		<!-- End of TestNG -->
+
+
+		<!-- Junit Version -->
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${maven.junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-junit</artifactId>
+			<version>${maven.cucumber.junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+
+		<!-- End of Junit -->
+
+		<!-- Allure Report using Cucumber JVM -->
+
+		<dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-cucumber7-jvm</artifactId>
+			<version>${maven.allure.cucumber.jvm.version}</version>
+		</dependency>
+
+
+		<!-- End Of Allure Report -->
+
+		<!-- Cucumber Extent Report Using Junit -->
+		<dependency>
+			<groupId>tech.grasshopper</groupId>
+			<artifactId>extentreports-cucumber7-adapter</artifactId>
+			<version>${maven.extent.report.cucumber.adapter}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>${maven.extent.report.version}</version>
+		</dependency>
+
+
+		<!-- End of Cucumber Extent Report -->
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${maven.lombok.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>${maven.cucumber.selenium.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>${maven.cucumber.webdriver.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-yaml</artifactId>
+			<version>${maven.fasterxml.jackson.version}</version>
+		</dependency>
+
+		<!-- Spring Boot -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+			<version>${maven.spring.boot.version}</version>
+		</dependency>
+
+		<!-- End of Spring Boot -->
+
+
+
+
+	</dependencies>
+</project>
