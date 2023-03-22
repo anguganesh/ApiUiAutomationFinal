@@ -34,7 +34,22 @@
 
 	<build>
 		<plugins>
-
+			
+			<!-- To delete test-output directory while executing
+			     mvn clean command  -->
+			<plugin>
+				<artifactId>maven-clean-plugin</artifactId>
+				<version>3.2.0</version>
+				<configuration>
+					<filesets>
+						<fileset>
+							<directory>${project.basedir}/test-output</directory>
+							<followSymlinks>false</followSymlinks>
+						</fileset>
+					</filesets>
+				</configuration>
+			</plugin>
+				
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
