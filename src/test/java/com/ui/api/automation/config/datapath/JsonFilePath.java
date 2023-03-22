@@ -13,9 +13,9 @@ import lombok.experimental.FieldDefaults;
 
 @Component
 //@PropertySource(value= {"classpath:jsonPathLocation.properties"})
-@PropertySource(value= {"classpath:yamlAndJsonPathLocation.yml"}, factory = YamlSourceFactory.class)
+@PropertySource(value= {"classpath:jsonPathLocation.yml"}, factory = YamlSourceFactory.class)
 @EnableConfigurationProperties
-@ConfigurationProperties(prefix = "target.application.jsonfilepath")
+@ConfigurationProperties(prefix = "json.filepath")
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class JsonFilePath {

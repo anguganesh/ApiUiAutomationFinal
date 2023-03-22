@@ -12,5 +12,10 @@ Feature: Register Feature Testing
   @tag40 
   Scenario: Register Feature scenario - 2
   	Given User navigates to "https://sethu.ac.in/"
+  	
+  	
+  @tag40 
+  Scenario: Register Feature scenario - 3
+  	Given User navigates to "https://nitt.edu/"
 
     

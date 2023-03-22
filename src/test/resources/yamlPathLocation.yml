@@ -1,0 +1,5 @@
+
+yaml:
+  filepath:
+      loginYamlFilePath: src/test/resources/YamlData/Login/LoginPage.yaml
+      browserYamlFilePath: src/test/resources/YamlData/BrowserData/BrowserDetails.yaml

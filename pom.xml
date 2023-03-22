@@ -12,23 +12,22 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
+		<java.version>18</java.version>
 		<maven.cucumber.version>7.5.0</maven.cucumber.version>
 		<maven.cucumber.jvm.deps>1.0.6</maven.cucumber.jvm.deps>
 		<maven.junit.version>4.13.2</maven.junit.version>
-		<maven.cucumber.junit.version>7.5.0</maven.cucumber.junit.version>
-		<maven.testng.version>7.4.0</maven.testng.version>
-		<maven.cucumber.testng.version>7.5.0</maven.cucumber.testng.version>
-		<maven.cucumber.selenium.version>4.5.0</maven.cucumber.selenium.version>
-		<maven.cucumber.webdriver.version>5.3.0</maven.cucumber.webdriver.version>
+		<maven.cucumber.junit.version>7.11.1</maven.cucumber.junit.version>
+		<maven.testng.version>7.7.0</maven.testng.version>
+		<maven.cucumber.testng.version>7.11.1</maven.cucumber.testng.version>
+		<maven.cucumber.selenium.version>4.8.0</maven.cucumber.selenium.version>
+		<maven.cucumber.webdriver.version>5.3.2</maven.cucumber.webdriver.version>
 		<maven.compiler.plugin.version>3.10.1</maven.compiler.plugin.version>
-		<maven.surefire.plugin.version>3.0.0-M7</maven.surefire.plugin.version>
-		<maven.fasterxml.jackson.version>2.13.4</maven.fasterxml.jackson.version>
+		<maven.surefire.plugin.version>3.0.0-M8</maven.surefire.plugin.version>
+		<maven.fasterxml.jackson.version>2.14.2</maven.fasterxml.jackson.version>
 		<maven.allure.cucumber.jvm.version>2.19.0</maven.allure.cucumber.jvm.version>
-		<maven.extent.report.cucumber.adapter>1.7.0</maven.extent.report.cucumber.adapter>
+		<maven.extent.report.cucumber.adapter>1.10.1</maven.extent.report.cucumber.adapter>
 		<maven.extent.report.version>5.0.9</maven.extent.report.version>
-		<maven.lombok.version>1.18.24</maven.lombok.version>
+		<maven.lombok.version>1.18.26</maven.lombok.version>
 		<maven.spring.boot.version>2.7.4</maven.spring.boot.version>
 	</properties>
 
@@ -41,8 +40,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>${maven.compiler.plugin.version}</version>
 				<configuration>
-					<source>${maven.compiler.source}</source>
-					<target>${maven.compiler.target}</target>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
 					<encoding>${project.build.sourceEncoding}</encoding>
 				</configuration>
 

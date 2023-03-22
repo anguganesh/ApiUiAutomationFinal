@@ -1,0 +1,6 @@
+
+json:
+   filepath:
+      loginJsonFilePath: src/test/resources/JsonData/Login/LoginPage.json
+    
+    

@@ -82,6 +82,7 @@ public class Hooks {
 		chromeOptions.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
 		chromeOptions.addArguments("--no-sandbox"); // Bypass OS security model
 		chromeOptions.addArguments("--dns-prefetch-disable");
+		chromeOptions.addArguments("--remote-allow-origins=*");
 		
 		if (browserDetails.getHeadless()) {
 			chromeOptions.addArguments("--headless");
