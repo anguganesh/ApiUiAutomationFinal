@@ -1,4 +1,4 @@
-package com.ui.api.automation.pages;
+package com.ui.automation.pages;
 
 
 import org.openqa.selenium.WebElement;
@@ -9,9 +9,10 @@ import org.openqa.selenium.support.PageFactory;
 import com.ui.api.automation.common.enums.ApplicationInputs;
 import com.ui.api.automation.common.enums.WebElementAttributes;
 import com.ui.api.automation.configuration.Hooks;
-import com.ui.api.automation.model.LoginDataModel;
+import com.ui.automation.model.LoginDataModel;
 import com.ui.automation.helpers.CommonFunctions;
 import com.ui.automation.helpers.VisibilityHelper;
+
 
 
 

@@ -1,4 +1,4 @@
-package com.ui.api.automation.steps;
+package com.ui.automation.steps;
 
 import com.ui.api.automation.configuration.Hooks;
 

@@ -1,11 +1,11 @@
-package com.ui.api.automation.steps;
+package com.ui.automation.steps;
 
 import java.io.IOException;
 
 import org.testng.Assert;
 import com.ui.api.automation.configuration.Hooks;
-import com.ui.api.automation.model.LoginDataModel;
-import com.ui.api.automation.pages.LoginPage;
+import com.ui.automation.model.LoginDataModel;
+import com.ui.automation.pages.LoginPage;
 import com.ui.automation.helpers.JsonHelper;
 import com.ui.automation.helpers.YamlHelper;
 import io.cucumber.java.en.Given;
@@ -82,27 +82,27 @@ public class LoginStepDefn extends BaseStepDefn {
 
 		// Read Login Data Using YamlHelper
 
-	/*	try {
-			String filepath = super.yamlFilePath.getLoginYamlFilePath();
+		try {
+			String filepath = super.uiYamlFilePath.getLoginYamlFilePath();
 			System.out.println("Login File Path" + filepath);
 			System.out.println("Yaml Object : " + yamlHelper);
 			inputLoginData = yamlHelper.readYamlToPojo(LoginDataModel.class, filepath);
-			System.out.println("Application Properties Address : " + super.yamlFilePath);
-			System.out.println("Application Properties Address : " + super.jsonFilePath);
+			System.out.println("Application Properties Address : " + super.uiYamlFilePath);
+			System.out.println("Application Properties Address : " + super.uiJsonFilePath);
 		} catch (IOException IoEx) {
 			System.out.println("Yaml to POJO exception: " + IoEx.getMessage());
 		}
-		return inputLoginData; */
+		return inputLoginData;
 
 		// Read Login Data Using JsonHelper
 
-		try {
+		/*try {
 			inputLoginData = jsonHelper.readJsonToPojo(LoginDataModel.class, super.jsonFilePath.getLoginJsonFilePath());
 		} catch (IOException IoEx) {
 			System.out.println("Json to POJO exception: " + IoEx.getMessage());
 		}
 
-		return inputLoginData;
+		return inputLoginData; */
 
 	}
 

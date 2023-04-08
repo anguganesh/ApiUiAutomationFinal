@@ -8,8 +8,10 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter;
-import com.ui.api.automation.config.datapath.JsonFilePath;
-import com.ui.api.automation.config.datapath.YamlFilePath;
+import com.ui.api.automation.config.datapath.ApiJsonFilePath;
+import com.ui.api.automation.config.datapath.ApiYamlFilePath;
+import com.ui.api.automation.config.datapath.UiJsonFilePath;
+import com.ui.api.automation.config.datapath.UiYamlFilePath;
 import com.ui.api.automation.configuration.Hooks;
 
 import io.cucumber.java.After;
@@ -22,8 +24,10 @@ public class BrowserConfiguration {
 
 	public final Hooks hooks;
 	private final ReportsConfiguration reportConfiguration;
-	private YamlFilePath yamlFilePath;
-	private JsonFilePath jsonFilePath;
+	private UiYamlFilePath uiYamlFilePath;
+	private UiJsonFilePath uiJsonFilePath;
+	private ApiYamlFilePath apiYamlFilePath;
+	private ApiJsonFilePath apiJsonFilePath;
 	
 	public BrowserConfiguration(Hooks hooks,
 			 ReportsConfiguration allureReportConfiguration) {
@@ -35,9 +39,12 @@ public class BrowserConfiguration {
 	@Before(order = 0)
 	public void configureFilePathLocation()  {
 		ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(ObjectConfig.class);
-		this.yamlFilePath = context.getBean(YamlFilePath.class); 
-		this.jsonFilePath = context.getBean(JsonFilePath.class);
-		hooks.setFilePathLocation(this.yamlFilePath, this.jsonFilePath);
+		this.uiYamlFilePath = context.getBean(UiYamlFilePath.class); 
+		this.uiJsonFilePath = context.getBean(UiJsonFilePath.class);
+		this.apiYamlFilePath = context.getBean(ApiYamlFilePath.class);
+		this.apiJsonFilePath = context.getBean(ApiJsonFilePath.class);
+		hooks.setFilePathLocation(this.uiYamlFilePath, this.uiJsonFilePath,
+								  this.apiYamlFilePath, this.apiJsonFilePath);
 	}
 	
 	@Before(order = 1)

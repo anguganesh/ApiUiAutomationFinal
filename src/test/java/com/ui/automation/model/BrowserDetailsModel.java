@@ -1,4 +1,4 @@
-package com.ui.api.automation.model;
+package com.ui.automation.model;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;

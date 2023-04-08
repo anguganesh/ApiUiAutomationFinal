@@ -18,10 +18,10 @@ import lombok.experimental.FieldDefaults;
 //@PropertySource(value= {"classpath:yamlPathLocation.properties"})
 @PropertySource(value= {"classpath:yamlPathLocation.yml"}, factory = YamlSourceFactory.class)
 @EnableConfigurationProperties
-@ConfigurationProperties(prefix = "yaml.filepath")
+@ConfigurationProperties(prefix = "ui.yaml.filepath")
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class YamlFilePath {
+public class UiYamlFilePath {
 	
 	String loginYamlFilePath;	
 	String browserYamlFilePath;

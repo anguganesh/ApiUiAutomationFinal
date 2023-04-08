@@ -14,10 +14,12 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.ui.api.automation.config.datapath.JsonFilePath;
-import com.ui.api.automation.config.datapath.YamlFilePath;
-import com.ui.api.automation.model.BrowserDetailsModel;
+import com.ui.api.automation.config.datapath.ApiJsonFilePath;
+import com.ui.api.automation.config.datapath.ApiYamlFilePath;
+import com.ui.api.automation.config.datapath.UiJsonFilePath;
+import com.ui.api.automation.config.datapath.UiYamlFilePath;
 import com.ui.automation.helpers.YamlHelper;
+import com.ui.automation.model.BrowserDetailsModel;
 
 import io.cucumber.java.Scenario;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -29,18 +31,24 @@ public class Hooks {
 	private WebDriver driver;
 	public BrowserDetailsModel browserDetails;
 	public final YamlHelper yamlHelper;
-	private YamlFilePath yamlFilePath;
-	private JsonFilePath jsonFilePath;
+	private UiYamlFilePath uiYamlFilePath;
+	private UiJsonFilePath uiJsonFilePath;
+	private ApiYamlFilePath apiYamlFilePath;
+	private ApiJsonFilePath apiJsonFilePath;
 
 	public Hooks(YamlHelper yamlHelper) {
 		// TODO Auto-generated constructor stub
 		this.yamlHelper = yamlHelper;
 	}
 
-	public void setFilePathLocation(YamlFilePath yamlFilePathObject,
-			   						JsonFilePath jsonFilePathObject ) {
-		this.yamlFilePath = yamlFilePathObject;
-		this.jsonFilePath = jsonFilePathObject;	
+	public void setFilePathLocation(UiYamlFilePath uiYamlFilePathObject,
+			   						UiJsonFilePath uiJsonFilePathObject,
+			   						ApiYamlFilePath apiYamlFilePath,
+			   						ApiJsonFilePath apiJsonFilePath ) {
+		this.uiYamlFilePath = uiYamlFilePathObject;
+		this.uiJsonFilePath = uiJsonFilePathObject;
+		this.apiYamlFilePath = apiYamlFilePath;
+		this.apiJsonFilePath = apiJsonFilePath;
 	}
 	
 	public WebDriver launchBrowser() {
@@ -114,7 +122,7 @@ public class Hooks {
 		
 	public BrowserDetailsModel getBrowserDetails() {
 		try {
-			browserDetails = yamlHelper.readYamlToPojo(BrowserDetailsModel.class, this.yamlFilePath.getBrowserYamlFilePath());
+			browserDetails = yamlHelper.readYamlToPojo(BrowserDetailsModel.class, this.uiYamlFilePath.getBrowserYamlFilePath());
 		} catch (IOException IoEx) {
 			log.debug("Getting POJO Exception :{}", IoEx.getMessage());
 		}
@@ -148,11 +156,11 @@ public class Hooks {
 		return this.driver;
 	}
 	
-	public YamlFilePath getYamlFilePathObject() {
-		return this.yamlFilePath;
+	public UiYamlFilePath getYamlFilePathObject() {
+		return this.uiYamlFilePath;
 	}
 	
-	public JsonFilePath getJsonFilePathObject() {
-		return this.jsonFilePath;
+	public UiJsonFilePath getJsonFilePathObject() {
+		return this.uiJsonFilePath;
 	}
 }

@@ -1,6 +1,9 @@
 
-json:
-   filepath:
+ui:
+  json:
+    filepath:
       loginJsonFilePath: src/test/resources/JsonData/Login/LoginPage.json
-    
-    
+api:
+  json:
+    filepath:
+      loginJsonFilePath: src/test/resources/JsonData/Login/LoginPage.json
