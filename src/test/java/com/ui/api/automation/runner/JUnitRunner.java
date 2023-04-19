@@ -19,7 +19,7 @@ import io.cucumber.junit.CucumberOptions;
 		monochrome = true,
 		publish = true,
 		dryRun = false,
-		tags = "@Billing"
+		tags = "@Test"
 						
 		
 		)

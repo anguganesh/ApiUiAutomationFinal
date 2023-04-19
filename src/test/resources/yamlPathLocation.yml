@@ -2,8 +2,8 @@
 ui:
   yaml:
     filepath:
-      loginYamlFilePath: src/test/resources/YamlData/Login/LoginPage.yaml
-      browserYamlFilePath: src/test/resources/YamlData/BrowserData/BrowserDetails.yaml
+      loginYamlFilePath: src/test/resources/YamlData/ui/Login/LoginPage.yaml
+      browserYamlFilePath: src/test/resources/YamlData/ui/BrowserData/BrowserDetails.yaml
 api:
   yaml:
     filepath:
