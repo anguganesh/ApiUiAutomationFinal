@@ -15,6 +15,7 @@
 		<java.version>18</java.version>
 		<maven.restAssured.version>5.3.0</maven.restAssured.version>
 		<maven.validationApi.version>2.0.1.Final</maven.validationApi.version>
+		<maven.jackson.jdk.dataType.jdk8>2.15.0-rc2</maven.jackson.jdk.dataType.jdk8>
 		<maven.cucumber.version>7.5.0</maven.cucumber.version>
 		<maven.cucumber.jvm.deps>1.0.6</maven.cucumber.jvm.deps>
 		<maven.junit.version>4.13.2</maven.junit.version>
@@ -274,7 +275,7 @@
 		<dependency>
 			<groupId>com.fasterxml.jackson.datatype</groupId>
 			<artifactId>jackson-datatype-jdk8</artifactId>
-			<version>2.15.0-rc2</version>
+			<version>${maven.jackson.jdk.dataType.jdk8}</version>
 		</dependency>
 
 		<!-- Spring Boot -->
