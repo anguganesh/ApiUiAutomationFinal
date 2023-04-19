@@ -1,4 +1,4 @@
-@Register
+@UI @Register
 Feature: Register Feature Testing
   
   Background:
