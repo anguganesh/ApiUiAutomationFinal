@@ -1,4 +1,4 @@
-- scenario: newData
+- scenario: createNewPatient
   username: test061@gmail.com
   password: test061@
   

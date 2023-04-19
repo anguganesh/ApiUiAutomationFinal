@@ -8,11 +8,14 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter;
+import com.ui.api.automation.config.datapath.ApiData;
+import com.ui.api.automation.config.datapath.ApiEndPointDetails;
 import com.ui.api.automation.config.datapath.ApiJsonFilePath;
 import com.ui.api.automation.config.datapath.ApiYamlFilePath;
 import com.ui.api.automation.config.datapath.UiJsonFilePath;
 import com.ui.api.automation.config.datapath.UiYamlFilePath;
 import com.ui.api.automation.configuration.Hooks;
+import com.ui.automation.helpers.ApiCommonFunctions;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -23,16 +26,21 @@ import io.qameta.allure.Allure;
 public class BrowserConfiguration {
 
 	public final Hooks hooks;
+	private final ApiCommonFunctions apiCommonFunctions;
 	private final ReportsConfiguration reportConfiguration;
 	private UiYamlFilePath uiYamlFilePath;
 	private UiJsonFilePath uiJsonFilePath;
 	private ApiYamlFilePath apiYamlFilePath;
 	private ApiJsonFilePath apiJsonFilePath;
+	private ApiEndPointDetails apiEndPointDetails;
+	private ApiData apiData;
 	
 	public BrowserConfiguration(Hooks hooks,
+			 ApiCommonFunctions apiCommonFunctions,
 			 ReportsConfiguration allureReportConfiguration) {
 		// TODO Auto-generated constructor stub
 		this.hooks = hooks;
+		this.apiCommonFunctions = apiCommonFunctions;
 		this.reportConfiguration = allureReportConfiguration;
 	}
 	
@@ -43,11 +51,15 @@ public class BrowserConfiguration {
 		this.uiJsonFilePath = context.getBean(UiJsonFilePath.class);
 		this.apiYamlFilePath = context.getBean(ApiYamlFilePath.class);
 		this.apiJsonFilePath = context.getBean(ApiJsonFilePath.class);
-		hooks.setFilePathLocation(this.uiYamlFilePath, this.uiJsonFilePath,
-								  this.apiYamlFilePath, this.apiJsonFilePath);
+		this.apiEndPointDetails = context.getBean(ApiEndPointDetails.class);
+		this.apiData = context.getBean(ApiData.class);
+		hooks.setFilePathLocation(this.uiYamlFilePath, this.uiJsonFilePath);
+		
+		apiCommonFunctions.setApiDetails(this.apiYamlFilePath, this.apiJsonFilePath,
+										 this.apiEndPointDetails, this.apiData);
 	}
 	
-	@Before(order = 1)
+	@Before("@UI")
 	public void openBrowser(Scenario scenario) {			
 		System.out.println("scenario Name : " + scenario.getName());
 		System.out.println("Thread : " + Thread.currentThread().getId());
@@ -57,7 +69,7 @@ public class BrowserConfiguration {
 		System.out.println("Driver Address after creating : " + hooks.getDriver());
 	}
 
-	@After
+	@After("@UI")
 	public void closeBrowser(Scenario scenario) throws IOException {
 		System.out.println("Executing CloseBrowser Method");
 		if(scenario.isFailed())  {

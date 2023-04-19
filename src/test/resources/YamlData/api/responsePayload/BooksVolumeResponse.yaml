@@ -1,0 +1,655 @@
+
+kind: books#volumes
+totalItems: 2928
+items:
+- kind: books#volume
+  id: 1hfMDQAAQBAJ
+  etag: '08YhW+Cpwh4'
+  selfLink: https://www.googleapis.com/books/v1/volumes/1hfMDQAAQBAJ
+  volumeInfo:
+    title: The Flower Book
+    subtitle: Let the Beauty of Each Bloom Speak for Itself
+    authors:
+    - Rachel Siegfried
+    publisher: Penguin
+    publishedDate: '2017-02-07'
+    description: The Flower Book explores 60 flowers, bloom-by-bloom in stunning portraiture.
+      Lush macrophotography allows readers to see the details of each featured flower
+      up close, from the amaryllis in spring, snapdragon in summer, and dahlia in
+      fall to tropical wonders such as orchids and more. Intimate portraits of each
+      flower include quick-reference profiles with tips for choosing the best blooms,
+      care for cut stems, arranging recommendations, colors, shapes, and even growing
+      tips to transform the home, from yard to tabletop. Gorgeous photographs throughout
+      spotlight 30 sample floral arrangements that show how to design and build custom
+      floral arrangements using featured blooms. Plus, a step-by-step techniques section
+      walks beginners through the basics of foliage and fillers, bouquets, and arrangements
+      to make this book as practical as it is beautiful. The Flower Book celebrates
+      all the wonderful qualities of flowers-their sheer beauty, infinite variety,
+      and power to evoke admiration-bloom by exquisite bloom.
+    industryIdentifiers:
+    - type: ISBN_13
+      identifier: '9781465464538'
+    - type: ISBN_10
+      identifier: '1465464530'
+    readingModes:
+      text: false
+      image: false
+    pageCount: 226
+    printType: BOOK
+    categories:
+    - Nature
+    maturityRating: NOT_MATURE
+    allowAnonLogging: true
+    contentVersion: 1.1.1.0.preview.0
+    panelizationSummary:
+      containsEpubBubbles: false
+      containsImageBubbles: false
+    imageLinks:
+      smallThumbnail: http://books.google.com/books/content?id=1hfMDQAAQBAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api
+      thumbnail: http://books.google.com/books/content?id=1hfMDQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api
+    language: en
+    previewLink: http://books.google.co.in/books?id=1hfMDQAAQBAJ&pg=PP1&dq=flowers&hl=&cd=1&source=gbs_api
+    infoLink: http://books.google.co.in/books?id=1hfMDQAAQBAJ&dq=flowers&hl=&source=gbs_api
+    canonicalVolumeLink: https://books.google.com/books/about/The_Flower_Book.html?hl=&id=1hfMDQAAQBAJ
+  saleInfo:
+    country: IN
+    saleability: NOT_FOR_SALE
+    isEbook: false
+  accessInfo:
+    country: IN
+    viewability: NO_PAGES
+    embeddable: false
+    publicDomain: false
+    textToSpeechPermission: ALLOWED
+    epub:
+      isAvailable: false
+    pdf:
+      isAvailable: true
+    webReaderLink: http://play.google.com/books/reader?id=1hfMDQAAQBAJ&hl=&source=gbs_api
+    accessViewStatus: NONE
+    quoteSharingAllowed: false
+- kind: books#volume
+  id: VuVuDQAAQBAJ
+  etag: IFCHDvFT7HI
+  selfLink: https://www.googleapis.com/books/v1/volumes/VuVuDQAAQBAJ
+  volumeInfo:
+    title: Plants and Flowers
+    subtitle: 1,761 Illustrations for Artists and Designers
+    authors:
+    - Alan E. Bessette
+    - William K. Chapman
+    publisher: Courier Corporation
+    publishedDate: '1992-09-08'
+    description: Offers scientifically accurate, copyright-free illustrations of hundreds
+      of plants and flowers from around the world
+    industryIdentifiers:
+    - type: ISBN_13
+      identifier: '9780486269573'
+    - type: ISBN_10
+      identifier: '0486269574'
+    readingModes:
+      text: false
+      image: true
+    pageCount: 291
+    printType: BOOK
+    categories:
+    - Nature
+    maturityRating: NOT_MATURE
+    allowAnonLogging: false
+    contentVersion: 0.5.0.0.preview.1
+    panelizationSummary:
+      containsEpubBubbles: false
+      containsImageBubbles: false
+    imageLinks:
+      smallThumbnail: http://books.google.com/books/content?id=VuVuDQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api
+      thumbnail: http://books.google.com/books/content?id=VuVuDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+    language: en
+    previewLink: http://books.google.co.in/books?id=VuVuDQAAQBAJ&printsec=frontcover&dq=flowers&hl=&cd=2&source=gbs_api
+    infoLink: http://books.google.co.in/books?id=VuVuDQAAQBAJ&dq=flowers&hl=&source=gbs_api
+    canonicalVolumeLink: https://books.google.com/books/about/Plants_and_Flowers.html?hl=&id=VuVuDQAAQBAJ
+  saleInfo:
+    country: IN
+    saleability: NOT_FOR_SALE
+    isEbook: false
+  accessInfo:
+    country: IN
+    viewability: PARTIAL
+    embeddable: true
+    publicDomain: false
+    textToSpeechPermission: ALLOWED
+    epub:
+      isAvailable: false
+    pdf:
+      isAvailable: true
+      acsTokenLink: http://books.google.co.in/books/download/Plants_and_Flowers-sample-pdf.acsm?id=VuVuDQAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api
+    webReaderLink: http://play.google.com/books/reader?id=VuVuDQAAQBAJ&hl=&source=gbs_api
+    accessViewStatus: SAMPLE
+    quoteSharingAllowed: false
+  searchInfo:
+    textSnippet: Offers scientifically accurate, copyright-free illustrations of hundreds
+      of plants and flowers from around the world
+- kind: books#volume
+  id: QZAtEAAAQBAJ
+  etag: Oja6l6jagKE
+  selfLink: https://www.googleapis.com/books/v1/volumes/QZAtEAAAQBAJ
+  volumeInfo:
+    title: Growing Flowers
+    subtitle: Everything You Need to Know About Planting, Tending, Harvesting and
+      Arranging Beautiful Blooms
+    authors:
+    - Niki Irving
+    publisher: Mango Media Inc.
+    publishedDate: '2021-05-11'
+    description: 'Learn How to Grow Flowering Plants “Anyone wanting to get started
+      with a flower garden will find plenty of expert guidance here.” ―Publishers
+      Weekly #1 Best Seller in Annual Flowers Gardening, Bulb Flower Gardening, and
+      Perennial Gardening. In the mountains of Asheville, NC, Niki Irving’s boutique
+      flower farm grows specially cut, mountain-fresh flowers with sustainable, natural
+      practices. Now, she brings her organic gardening techniques to your home, helping
+      you grow, harvest, and arrange lush, seasonally inspired flowers. Revel in flowering
+      plants. This beautifully photographed book features simple, and engaging know-how
+      enabling you to grow, harvest, and arrange a cutting garden of flowers. An instructional
+      guide to gardening for beginners or if you’re looking to hone your botanical
+      skills, Growing Flowers teaches everything from caring for a cut flower garden
+      to making simple-yet-gorgeous flower arrangements and botanical bouquets. An
+      indispensable gardening guide for homebody horticulturists and floral foragers.
+      A flower book with a whimsical twist, Growing Flowers is a go-to reference for
+      those new to herb and flower gardening. Discover flower arranging techniques
+      using blooms, greenery, and even artichokes, vines and berries. Learn about
+      tools of the trade. Get down and dirty with dirt, seasonal rotation, starting
+      from seeds and/or seedlings, and more. Inside find: • Explanations of soil types
+      and soil preparations • A list of seasonal flowers such as peonies or garden
+      roses for the spring and sunflowers and dahlias for the summer and fall • Basic
+      knowledge to create flower bouquets that include things like sprigs of greenery
+      and even attractive weeds Growing Flowers is a wonderful addition to any collection
+      of garden books. If you’re looking for gardening gifts for gardeners or enjoy
+      flowering plant books and flower books like Floret Farms Cut Flower Garden book,
+      Floret Farm''s A Year in Flowers, or The Flower Gardener''s Bible, you’ll love
+      Growing Flowers.'
+    industryIdentifiers:
+    - type: ISBN_13
+      identifier: '9781642505511'
+    - type: ISBN_10
+      identifier: 164250551X
+    readingModes:
+      text: true
+      image: true
+    pageCount: 161
+    printType: BOOK
+    categories:
+    - Gardening
+    maturityRating: NOT_MATURE
+    allowAnonLogging: false
+    contentVersion: 1.1.1.0.preview.3
+    panelizationSummary:
+      containsEpubBubbles: false
+      containsImageBubbles: false
+    imageLinks:
+      smallThumbnail: http://books.google.com/books/content?id=QZAtEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api
+      thumbnail: http://books.google.com/books/content?id=QZAtEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+    language: en
+    previewLink: http://books.google.co.in/books?id=QZAtEAAAQBAJ&pg=PA1&dq=flowers&hl=&cd=3&source=gbs_api
+    infoLink: https://play.google.com/store/books/details?id=QZAtEAAAQBAJ&source=gbs_api
+    canonicalVolumeLink: https://play.google.com/store/books/details?id=QZAtEAAAQBAJ
+  saleInfo:
+    country: IN
+    saleability: FOR_SALE
+    isEbook: true
+    listPrice:
+      amount: 1450.65
+      currencyCode: INR
+    retailPrice:
+      amount: 725.32
+      currencyCode: INR
+    buyLink: https://play.google.com/store/books/details?id=QZAtEAAAQBAJ&rdid=book-QZAtEAAAQBAJ&rdot=1&source=gbs_api
+    offers:
+    - finskyOfferType: 1
+      listPrice:
+        amountInMicros: 1450650000
+        currencyCode: INR
+      retailPrice:
+        amountInMicros: 725320000
+        currencyCode: INR
+  accessInfo:
+    country: IN
+    viewability: PARTIAL
+    embeddable: true
+    publicDomain: false
+    textToSpeechPermission: ALLOWED
+    epub:
+      isAvailable: true
+    pdf:
+      isAvailable: true
+    webReaderLink: http://play.google.com/books/reader?id=QZAtEAAAQBAJ&hl=&source=gbs_api
+    accessViewStatus: SAMPLE
+    quoteSharingAllowed: false
+  searchInfo:
+    textSnippet: Revel in flowering plants. This beautifully photographed book features
+      simple, and engaging know-how enabling you to grow, harvest, and arrange a cutting
+      garden of flowers.
+- kind: books#volume
+  id: jolNtaTkoqEC
+  etag: 7F6K9Gy6IU0
+  selfLink: https://www.googleapis.com/books/v1/volumes/jolNtaTkoqEC
+  volumeInfo:
+    title: A Victorian Flower Dictionary
+    subtitle: The Language of Flowers Companion
+    authors:
+    - Mandy Kirkby
+    publisher: Ballantine Books
+    publishedDate: '2011-09-20'
+    description: "“A flower is not a flower alone; a thousand thoughts invest it.”
+      Daffodils signal new beginnings, daisies innocence. Lilacs mean the first emotions
+      of love, periwinkles tender recollection. Early Victorians used flowers as a
+      way to express their feelings—love or grief, jealousy or devotion. Now, modern-day
+      romantics are enjoying a resurgence of this bygone custom, and this book will
+      share the historical, literary, and cultural significance of flowers with a
+      whole new generation. With lavish illustrations, a dual dictionary of flora
+      and meanings, and suggestions for creating expressive arrangements, this keepsake
+      is the perfect compendium for everyone who has ever given or received a bouquet."
+    industryIdentifiers:
+    - type: ISBN_13
+      identifier: '9780345532862'
+    - type: ISBN_10
+      identifier: '0345532864'
+    readingModes:
+      text: false
+      image: false
+    pageCount: 194
+    printType: BOOK
+    categories:
+    - Nature
+    maturityRating: NOT_MATURE
+    allowAnonLogging: false
+    contentVersion: 0.8.1.0.preview.0
+    panelizationSummary:
+      containsEpubBubbles: false
+      containsImageBubbles: false
+    imageLinks:
+      smallThumbnail: http://books.google.com/books/content?id=jolNtaTkoqEC&printsec=frontcover&img=1&zoom=5&source=gbs_api
+      thumbnail: http://books.google.com/books/content?id=jolNtaTkoqEC&printsec=frontcover&img=1&zoom=1&source=gbs_api
+    language: en
+    previewLink: http://books.google.co.in/books?id=jolNtaTkoqEC&dq=flowers&hl=&cd=4&source=gbs_api
+    infoLink: http://books.google.co.in/books?id=jolNtaTkoqEC&dq=flowers&hl=&source=gbs_api
+    canonicalVolumeLink: https://books.google.com/books/about/A_Victorian_Flower_Dictionary.html?hl=&id=jolNtaTkoqEC
+  saleInfo:
+    country: IN
+    saleability: NOT_FOR_SALE
+    isEbook: false
+  accessInfo:
+    country: IN
+    viewability: NO_PAGES
+    embeddable: false
+    publicDomain: false
+    textToSpeechPermission: ALLOWED
+    epub:
+      isAvailable: false
+    pdf:
+      isAvailable: true
+    webReaderLink: http://play.google.com/books/reader?id=jolNtaTkoqEC&hl=&source=gbs_api
+    accessViewStatus: NONE
+    quoteSharingAllowed: false
+  searchInfo:
+    textSnippet: Now, modern-day romantics are enjoying a resurgence of this bygone
+      custom, and this book will share the historical, literary, and cultural significance
+      of flowers with a whole new generation.
+- kind: books#volume
+  id: ayQqAAAAYAAJ
+  etag: JvleyNVtdeA
+  selfLink: https://www.googleapis.com/books/v1/volumes/ayQqAAAAYAAJ
+  volumeInfo:
+    title: How to Know the Wild Flowers
+    subtitle: A Guide to the Names, Haunts, and Habits of Our Common Wild Flowers
+    authors:
+    - Frances Theodora Parsons
+    publishedDate: '1895'
+    description: Considered the first field guide to American wild flowers when first
+      published in 1893, this revised and enlarged edition contains 156 plates and
+      provides botanical details and lore for nearly five hundred flowering plants
+      personally observed by the author in parts of New England, New York, New Jersey,
+      Pennsylvania, and in the vicinity of Washington, D.C., along with a few found
+      outside this range and east of Chicago. The listings are grouped by color of
+      flower.
+    industryIdentifiers:
+    - type: OTHER
+      identifier: HARVARD:HW2GUL
+    readingModes:
+      text: false
+      image: true
+    pageCount: 408
+    printType: BOOK
+    categories:
+    - Botany
+    maturityRating: NOT_MATURE
+    allowAnonLogging: false
+    contentVersion: 0.6.4.0.full.1
+    panelizationSummary:
+      containsEpubBubbles: false
+      containsImageBubbles: false
+    imageLinks:
+      smallThumbnail: http://books.google.com/books/content?id=ayQqAAAAYAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api
+      thumbnail: http://books.google.com/books/content?id=ayQqAAAAYAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+    language: en
+    previewLink: http://books.google.co.in/books?id=ayQqAAAAYAAJ&printsec=frontcover&dq=flowers&hl=&cd=5&source=gbs_api
+    infoLink: https://play.google.com/store/books/details?id=ayQqAAAAYAAJ&source=gbs_api
+    canonicalVolumeLink: https://play.google.com/store/books/details?id=ayQqAAAAYAAJ
+  saleInfo:
+    country: IN
+    saleability: FREE
+    isEbook: true
+    buyLink: https://play.google.com/store/books/details?id=ayQqAAAAYAAJ&rdid=book-ayQqAAAAYAAJ&rdot=1&source=gbs_api
+  accessInfo:
+    country: IN
+    viewability: ALL_PAGES
+    embeddable: true
+    publicDomain: true
+    textToSpeechPermission: ALLOWED
+    epub:
+      isAvailable: false
+      downloadLink: http://books.google.co.in/books/download/How_to_Know_the_Wild_Flowers.epub?id=ayQqAAAAYAAJ&hl=&output=epub&source=gbs_api
+    pdf:
+      isAvailable: true
+      downloadLink: http://books.google.co.in/books/download/How_to_Know_the_Wild_Flowers.pdf?id=ayQqAAAAYAAJ&hl=&output=pdf&sig=ACfU3U1WmTvuodNKU8v1bT6Lc_BMwP9fQQ&source=gbs_api
+    webReaderLink: http://play.google.com/books/reader?id=ayQqAAAAYAAJ&hl=&source=gbs_api
+    accessViewStatus: FULL_PUBLIC_DOMAIN
+    quoteSharingAllowed: false
+  searchInfo:
+    textSnippet: Considered the first field guide to American wild flowers when first
+      published in 1893, this revised and enlarged edition contains 156 plates and
+      provides botanical details and lore for nearly five hundred flowering plants
+      personally ...
+- kind: books#volume
+  id: "-LcrCgAAQBAJ"
+  etag: tIHmivw6p2I
+  selfLink: https://www.googleapis.com/books/v1/volumes/-LcrCgAAQBAJ
+  volumeInfo:
+    title: The Reason for Flowers
+    subtitle: Their History, Culture, Biology, and How They Change Our Lives
+    authors:
+    - Stephen Buchmann
+    publisher: Simon and Schuster
+    publishedDate: '2015-07-21'
+    description: An exploration of the roles flowers play in the production of our
+      foods, spices, medicines, and perfumes reveals their origins, myriad shapes,
+      colors, textures and scents, bizarre sex lives, and how humans-- and the natural
+      world-- relate and depend upon them.
+    industryIdentifiers:
+    - type: ISBN_13
+      identifier: '9781476755526'
+    - type: ISBN_10
+      identifier: '1476755523'
+    readingModes:
+      text: false
+      image: false
+    pageCount: 352
+    printType: BOOK
+    categories:
+    - History
+    maturityRating: NOT_MATURE
+    allowAnonLogging: false
+    contentVersion: preview-1.0.0
+    panelizationSummary:
+      containsEpubBubbles: false
+      containsImageBubbles: false
+    imageLinks:
+      smallThumbnail: http://books.google.com/books/content?id=-LcrCgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api
+      thumbnail: http://books.google.com/books/content?id=-LcrCgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+    language: en
+    previewLink: http://books.google.co.in/books?id=-LcrCgAAQBAJ&pg=PR1&dq=flowers&hl=&cd=6&source=gbs_api
+    infoLink: http://books.google.co.in/books?id=-LcrCgAAQBAJ&dq=flowers&hl=&source=gbs_api
+    canonicalVolumeLink: https://books.google.com/books/about/The_Reason_for_Flowers.html?hl=&id=-LcrCgAAQBAJ
+  saleInfo:
+    country: IN
+    saleability: NOT_FOR_SALE
+    isEbook: false
+  accessInfo:
+    country: IN
+    viewability: PARTIAL
+    embeddable: true
+    publicDomain: false
+    textToSpeechPermission: ALLOWED_FOR_ACCESSIBILITY
+    epub:
+      isAvailable: false
+    pdf:
+      isAvailable: false
+    webReaderLink: http://play.google.com/books/reader?id=-LcrCgAAQBAJ&hl=&source=gbs_api
+    accessViewStatus: SAMPLE
+    quoteSharingAllowed: false
+  searchInfo:
+    textSnippet: An exploration of the roles flowers play in the production of our
+      foods, spices, medicines, and perfumes reveals their origins, myriad shapes,
+      colors, textures and scents, bizarre sex lives, and how humans-- and the natural
+      world-- relate ...
+- kind: books#volume
+  id: C-IYAAAAYAAJ
+  etag: SqrE78kKXOY
+  selfLink: https://www.googleapis.com/books/v1/volumes/C-IYAAAAYAAJ
+  volumeInfo:
+    title: British Wild Flowers
+    authors:
+    - Thomas Moore
+    publishedDate: '1867'
+    industryIdentifiers:
+    - type: OTHER
+      identifier: HARVARD:32044106356827
+    readingModes:
+      text: false
+      image: true
+    pageCount: 566
+    printType: BOOK
+    maturityRating: NOT_MATURE
+    allowAnonLogging: false
+    contentVersion: 1.3.5.0.full.1
+    panelizationSummary:
+      containsEpubBubbles: false
+      containsImageBubbles: false
+    imageLinks:
+      smallThumbnail: http://books.google.com/books/content?id=C-IYAAAAYAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api
+      thumbnail: http://books.google.com/books/content?id=C-IYAAAAYAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+    language: en
+    previewLink: http://books.google.co.in/books?id=C-IYAAAAYAAJ&printsec=frontcover&dq=flowers&hl=&cd=7&source=gbs_api
+    infoLink: https://play.google.com/store/books/details?id=C-IYAAAAYAAJ&source=gbs_api
+    canonicalVolumeLink: https://play.google.com/store/books/details?id=C-IYAAAAYAAJ
+  saleInfo:
+    country: IN
+    saleability: FREE
+    isEbook: true
+    buyLink: https://play.google.com/store/books/details?id=C-IYAAAAYAAJ&rdid=book-C-IYAAAAYAAJ&rdot=1&source=gbs_api
+  accessInfo:
+    country: IN
+    viewability: ALL_PAGES
+    embeddable: true
+    publicDomain: true
+    textToSpeechPermission: ALLOWED
+    epub:
+      isAvailable: false
+      downloadLink: http://books.google.co.in/books/download/British_Wild_Flowers.epub?id=C-IYAAAAYAAJ&hl=&output=epub&source=gbs_api
+    pdf:
+      isAvailable: true
+      downloadLink: http://books.google.co.in/books/download/British_Wild_Flowers.pdf?id=C-IYAAAAYAAJ&hl=&output=pdf&sig=ACfU3U31pzMyxpoLKmJdoBR7MhslKePczQ&source=gbs_api
+    webReaderLink: http://play.google.com/books/reader?id=C-IYAAAAYAAJ&hl=&source=gbs_api
+    accessViewStatus: FULL_PUBLIC_DOMAIN
+    quoteSharingAllowed: false
+- kind: books#volume
+  id: 8LIifmGfMc4C
+  etag: T6FOjFrz3og
+  selfLink: https://www.googleapis.com/books/v1/volumes/8LIifmGfMc4C
+  volumeInfo:
+    title: Tropical Flowers of the World Coloring Book
+    authors:
+    - Lynda E. Chandler
+    publisher: Courier Corporation
+    publishedDate: 1981-12
+    description: 'Here are handsome line renderings of 45 colorful, varied, and exotic
+      specimens: Cannonball Tree (Brazil and Trinidad); Bird-of-Paradise Flower (South
+      Africa); Flame of the Forest (India); Sausage Tree (Africa); Cup-and-Saucer
+      Vine (Mexico); and 40 others. Publisher''s note and captions.'
+    industryIdentifiers:
+    - type: ISBN_10
+      identifier: '0486242064'
+    - type: ISBN_13
+      identifier: '9780486242064'
+    readingModes:
+      text: false
+      image: true
+    pageCount: 54
+    printType: BOOK
+    categories:
+    - Juvenile Nonfiction
+    maturityRating: NOT_MATURE
+    allowAnonLogging: false
+    contentVersion: 1.3.4.0.preview.1
+    panelizationSummary:
+      containsEpubBubbles: false
+      containsImageBubbles: false
+    imageLinks:
+      smallThumbnail: http://books.google.com/books/content?id=8LIifmGfMc4C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api
+      thumbnail: http://books.google.com/books/content?id=8LIifmGfMc4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+    language: en
+    previewLink: http://books.google.co.in/books?id=8LIifmGfMc4C&printsec=frontcover&dq=flowers&hl=&cd=8&source=gbs_api
+    infoLink: http://books.google.co.in/books?id=8LIifmGfMc4C&dq=flowers&hl=&source=gbs_api
+    canonicalVolumeLink: https://books.google.com/books/about/Tropical_Flowers_of_the_World_Coloring_B.html?hl=&id=8LIifmGfMc4C
+  saleInfo:
+    country: IN
+    saleability: NOT_FOR_SALE
+    isEbook: false
+  accessInfo:
+    country: IN
+    viewability: PARTIAL
+    embeddable: true
+    publicDomain: false
+    textToSpeechPermission: ALLOWED
+    epub:
+      isAvailable: false
+    pdf:
+      isAvailable: true
+      acsTokenLink: http://books.google.co.in/books/download/Tropical_Flowers_of_the_World_Coloring_B-sample-pdf.acsm?id=8LIifmGfMc4C&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api
+    webReaderLink: http://play.google.com/books/reader?id=8LIifmGfMc4C&hl=&source=gbs_api
+    accessViewStatus: SAMPLE
+    quoteSharingAllowed: false
+  searchInfo:
+    textSnippet: 'Here are handsome line renderings of 45 colorful, varied, and exotic
+      specimens: Cannonball Tree (Brazil and Trinidad); Bird-of-Paradise Flower (South
+      Africa); Flame of the Forest (India); Sausage Tree (Africa); Cup-and-Saucer
+      Vine (Mexico); ...'
+- kind: books#volume
+  id: h1nYAAAAMAAJ
+  etag: jTb/Iyi5AIQ
+  selfLink: https://www.googleapis.com/books/v1/volumes/h1nYAAAAMAAJ
+  volumeInfo:
+    title: The Encyclopedia of Flowers
+    publisher: Smithmark Pub
+    publishedDate: '1992'
+    description: Provides information on identifying and growing a variety of annuals,
+      perennials, bulbs, and flowering shrubs and trees that flourish in North America
+    industryIdentifiers:
+    - type: OTHER
+      identifier: PSU:000021821967
+    readingModes:
+      text: false
+      image: false
+    pageCount: 216
+    printType: BOOK
+    categories:
+    - Technology & Engineering
+    maturityRating: NOT_MATURE
+    allowAnonLogging: false
+    contentVersion: 1.3.1.0.preview.0
+    panelizationSummary:
+      containsEpubBubbles: false
+      containsImageBubbles: false
+    imageLinks:
+      smallThumbnail: http://books.google.com/books/content?id=h1nYAAAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api
+      thumbnail: http://books.google.com/books/content?id=h1nYAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api
+    language: en
+    previewLink: http://books.google.co.in/books?id=h1nYAAAAMAAJ&dq=flowers&hl=&cd=9&source=gbs_api
+    infoLink: http://books.google.co.in/books?id=h1nYAAAAMAAJ&dq=flowers&hl=&source=gbs_api
+    canonicalVolumeLink: https://books.google.com/books/about/The_Encyclopedia_of_Flowers.html?hl=&id=h1nYAAAAMAAJ
+  saleInfo:
+    country: IN
+    saleability: NOT_FOR_SALE
+    isEbook: false
+  accessInfo:
+    country: IN
+    viewability: NO_PAGES
+    embeddable: false
+    publicDomain: false
+    textToSpeechPermission: ALLOWED
+    epub:
+      isAvailable: false
+    pdf:
+      isAvailable: false
+    webReaderLink: http://play.google.com/books/reader?id=h1nYAAAAMAAJ&hl=&source=gbs_api
+    accessViewStatus: NONE
+    quoteSharingAllowed: false
+  searchInfo:
+    textSnippet: Provides descriptions and culture information about 350 plants, including
+      annuals, perennials, bulbs, shrubs, and small trees.
+- kind: books#volume
+  id: ACA4ugEACAAJ
+  etag: hgdtrPTyWec
+  selfLink: https://www.googleapis.com/books/v1/volumes/ACA4ugEACAAJ
+  volumeInfo:
+    title: The Book of the Flower
+    subtitle: Flowers in Art
+    authors:
+    - Angus Hyland
+    - Kendra Wilson
+    publisher: Laurence King Publishing
+    publishedDate: '2019-04-02'
+    description: '"Art is the flower, life is the green leaf"—Charles Rennie Mackintosh
+      Haphazard bunches, formal bouquets, chance arrangements, quiet and thoughtful
+      rural encounters—The Book of the Flower is a sylvan collection of beautiful
+      depictions of flowers by artists, photographers, and illustrators. Interspersed
+      through the illustrations are short texts about the artists and their interest
+      in particular flowers, from Georgia O''Keeffe''s sumptuous close-ups of Jimson
+      Weed and cactus flowers to Matisse''s roses, Keika Hasegawa''s chrysanthemums,
+      and Albert York''s close study of zinnias. A wonderful collection for art-lovers,
+      gardeners, and flower-fanciers.'
+    industryIdentifiers:
+    - type: ISBN_10
+      identifier: '1786272458'
+    - type: ISBN_13
+      identifier: '9781786272454'
+    readingModes:
+      text: false
+      image: false
+    pageCount: 0
+    printType: BOOK
+    categories:
+    - Art
+    maturityRating: NOT_MATURE
+    allowAnonLogging: false
+    contentVersion: preview-1.0.0
+    panelizationSummary:
+      containsEpubBubbles: false
+      containsImageBubbles: false
+    imageLinks:
+      smallThumbnail: http://books.google.com/books/content?id=ACA4ugEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api
+      thumbnail: http://books.google.com/books/content?id=ACA4ugEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api
+    language: en
+    previewLink: http://books.google.co.in/books?id=ACA4ugEACAAJ&dq=flowers&hl=&cd=10&source=gbs_api
+    infoLink: http://books.google.co.in/books?id=ACA4ugEACAAJ&dq=flowers&hl=&source=gbs_api
+    canonicalVolumeLink: https://books.google.com/books/about/The_Book_of_the_Flower.html?hl=&id=ACA4ugEACAAJ
+  saleInfo:
+    country: IN
+    saleability: NOT_FOR_SALE
+    isEbook: false
+  accessInfo:
+    country: IN
+    viewability: NO_PAGES
+    embeddable: false
+    publicDomain: false
+    textToSpeechPermission: ALLOWED
+    epub:
+      isAvailable: false
+    pdf:
+      isAvailable: false
+    webReaderLink: http://play.google.com/books/reader?id=ACA4ugEACAAJ&hl=&source=gbs_api
+    accessViewStatus: NONE
+    quoteSharingAllowed: false
+  searchInfo:
+    textSnippet: "&quot;Art is the flower, life is the green leaf&quot;—Charles Rennie
+      Mackintosh Haphazard bunches, formal bouquets, chance arrangements, quiet and
+      thoughtful rural encounters—The Book of the Flower is a sylvan collection of
+      beautiful depictions ..."

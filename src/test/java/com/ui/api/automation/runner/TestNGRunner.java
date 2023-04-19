@@ -11,6 +11,7 @@ import org.testng.annotations.DataProvider;
 
 		features = "./Features",
 		glue = { "com.ui.automation.steps",
+				"com.api.automation.steps",
 				"com.ui.api.automation.configuration" }, 
 		plugin = { "pretty",
 				   "html:target/cucumberHTML/cucumber-html-report.html",
@@ -21,7 +22,7 @@ import org.testng.annotations.DataProvider;
 		monochrome = true, 
 		publish = true, 
 		dryRun = false,
-		tags = "@Billing"
+		tags = "@verifyBooksVolumeEndpoint"
 
 )
 

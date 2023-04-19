@@ -11,21 +11,18 @@ import lombok.AccessLevel;
 import lombok.Data;
 import lombok.experimental.FieldDefaults;
 
-
-
-
 @Component
-//@PropertySource(value= {"classpath:yamlPathLocation.properties"})
-@PropertySource(value= {"classpath:yamlPathLocation.yml"}, factory = YamlSourceFactory.class)
+//@PropertySource(value= {"classpath:jsonPathLocation.properties"})
+@PropertySource(value= {"classpath:apiEndPoints.yml"}, factory = YamlSourceFactory.class)
 @EnableConfigurationProperties
-@ConfigurationProperties(prefix = "api.yaml.filepath")
+@ConfigurationProperties(prefix = "target.application")
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class ApiYamlFilePath {
+public class ApiData {
 	
-	String booksVolumeResponseFilePath;	
-	String browserYamlFilePath;
-	String userDetailsGetResponseYamlFilePath;
-	String allUserDetailsResponseFilePath;
-	String userDataForPostRequestFilePath;	
+	String restApiResponseTime;
+	String keyValue;
+	String apiKey;
+	String goRestAuthorizationValue;
+
 }

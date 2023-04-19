@@ -4,7 +4,7 @@ Feature: Billing Feature Testing
   Background:
 		Given User has to login first
   
-  @tag1  
+  @tag1  @Test
   Scenario: Billing Feature scenario - 1
     Given  User navigate to "https://www.nitt.edu/"
      When  User navigate to "https://www.nitt.edu/"

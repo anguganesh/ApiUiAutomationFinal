@@ -9,6 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 		
 		features = "./Features",
 		glue = {"com.ui.automation.steps",
+				"com.api.automation.steps",
 				"com.ui.api.automation.configuration"},
 		plugin = {"pretty","html:target/cucumberHTML/cucumber-html-report.html",
 				   "json:target/cucumberJson/cucumber.json", 				

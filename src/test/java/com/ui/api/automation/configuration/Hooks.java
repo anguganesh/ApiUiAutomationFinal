@@ -14,6 +14,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.ui.api.automation.config.datapath.ApiData;
+import com.ui.api.automation.config.datapath.ApiEndPointDetails;
 import com.ui.api.automation.config.datapath.ApiJsonFilePath;
 import com.ui.api.automation.config.datapath.ApiYamlFilePath;
 import com.ui.api.automation.config.datapath.UiJsonFilePath;
@@ -33,24 +35,17 @@ public class Hooks {
 	public final YamlHelper yamlHelper;
 	private UiYamlFilePath uiYamlFilePath;
 	private UiJsonFilePath uiJsonFilePath;
-	private ApiYamlFilePath apiYamlFilePath;
-	private ApiJsonFilePath apiJsonFilePath;
-
+	
 	public Hooks(YamlHelper yamlHelper) {
 		// TODO Auto-generated constructor stub
 		this.yamlHelper = yamlHelper;
 	}
 
-	public void setFilePathLocation(UiYamlFilePath uiYamlFilePathObject,
-			   						UiJsonFilePath uiJsonFilePathObject,
-			   						ApiYamlFilePath apiYamlFilePath,
-			   						ApiJsonFilePath apiJsonFilePath ) {
+	public void setFilePathLocation(UiYamlFilePath uiYamlFilePathObject, UiJsonFilePath uiJsonFilePathObject) {
 		this.uiYamlFilePath = uiYamlFilePathObject;
 		this.uiJsonFilePath = uiJsonFilePathObject;
-		this.apiYamlFilePath = apiYamlFilePath;
-		this.apiJsonFilePath = apiJsonFilePath;
 	}
-	
+
 	public WebDriver launchBrowser() {
 
 		if (this.driver == null)
@@ -59,20 +54,20 @@ public class Hooks {
 	}
 
 	public void closeBrowser() {
-		 System.out.println("Before closing Browser : " + this.driver);
-		 driver.close();
-		 driver.quit();		
-		if(driver != null) {
+		System.out.println("Before closing Browser : " + this.driver);
+		if (driver != null) {
+			driver.close();
+			driver.quit();
 			driver = null;
 		}
 	}
-	
-	public WebDriverWait getWait() {		
+
+	public WebDriverWait getWait() {
 		WebDriverWait wait = new WebDriverWait(this.getDriver(), Duration.ofSeconds(browserDetails.getExplicitWait()));
 		return wait;
 	}
-	
-	private void initializeDriver() {	
+
+	private void initializeDriver() {
 		this.getBrowserDetails();
 		if ("chrome".equals(browserDetails.getBrowserName())) {
 			setChromeDriver();
@@ -91,7 +86,7 @@ public class Hooks {
 		chromeOptions.addArguments("--no-sandbox"); // Bypass OS security model
 		chromeOptions.addArguments("--dns-prefetch-disable");
 		chromeOptions.addArguments("--remote-allow-origins=*");
-		
+
 		if (browserDetails.getHeadless()) {
 			chromeOptions.addArguments("--headless");
 			chromeOptions.addArguments("--disable-gpu");
@@ -99,45 +94,43 @@ public class Hooks {
 		}
 
 		WebDriverManager.chromedriver().setup();
-		
+
 		if (browserDetails.getRemote())
 			try {
 				driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), chromeOptions);
 			} catch (MalformedURLException malEx) {
 				log.debug("Getting WebDriver exception : {}", malEx.getMessage());
 			}
-		else 
-			driver = new ChromeDriver(chromeOptions);	
-			
+		else
+			driver = new ChromeDriver(chromeOptions);
 
 		driver.get(browserDetails.getBaseUrl());
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(browserDetails.getImplicitWait()));
-		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(browserDetails.getPageLoadTimeOut()));		
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(browserDetails.getPageLoadTimeOut()));
 	}
 
 	public void setFirefoxDriver() {
 		WebDriverManager.firefoxdriver().setup();
 	}
 
-		
 	public BrowserDetailsModel getBrowserDetails() {
 		try {
-			browserDetails = yamlHelper.readYamlToPojo(BrowserDetailsModel.class, this.uiYamlFilePath.getBrowserYamlFilePath());
+			browserDetails = yamlHelper.readYamlToPojo(BrowserDetailsModel.class,
+					this.uiYamlFilePath.getBrowserYamlFilePath());
 		} catch (IOException IoEx) {
 			log.debug("Getting POJO Exception :{}", IoEx.getMessage());
 		}
 		return browserDetails;
 	}
-		
 
-	public byte[] getScreenshotAsBytes() {		
-		return ((TakesScreenshot) this.driver).getScreenshotAs(OutputType.BYTES);		
+	public byte[] getScreenshotAsBytes() {
+		return ((TakesScreenshot) this.driver).getScreenshotAs(OutputType.BYTES);
 	}
-		
+
 	public void copyScreenshotAsFile(Scenario scenario) {
 		TakesScreenshot takesScreenshot = (TakesScreenshot) getDriver();
 		String screenshotFilePath = "./target/Screenshots/" + scenario.getName() + ".PNG";
-		File sourceFile = takesScreenshot.getScreenshotAs(OutputType.FILE);	
+		File sourceFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
 		File destFile = new File(screenshotFilePath);
 		try {
 			FileUtils.copyFile(sourceFile, destFile);
@@ -146,20 +139,19 @@ public class Hooks {
 			e.printStackTrace();
 		}
 	}
-	
-	
+
 	public String getBase64StringOfScreenshot() {
-		return ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BASE64);	
+		return ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BASE64);
 	}
-	
+
 	public WebDriver getDriver() {
 		return this.driver;
 	}
-	
+
 	public UiYamlFilePath getYamlFilePathObject() {
 		return this.uiYamlFilePath;
 	}
-	
+
 	public UiJsonFilePath getJsonFilePathObject() {
 		return this.uiJsonFilePath;
 	}
