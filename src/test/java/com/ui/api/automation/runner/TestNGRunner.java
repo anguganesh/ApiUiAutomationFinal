@@ -22,7 +22,7 @@ import org.testng.annotations.DataProvider;
 		monochrome = true, 
 		publish = true, 
 		dryRun = false,
-		tags = "@Test"
+		tags = "@UI"
 
 )
 
