@@ -1,4 +1,4 @@
-@Login
+@Login @UI
 Feature: Login Feature Testing
   
   Background:
