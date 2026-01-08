@@ -8,7 +8,7 @@
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java.version>18</java.version>
+		<java.version>24</java.version>
 		<maven.restAssured.version>5.3.0</maven.restAssured.version>
 		<maven.validationApi.version>2.0.1.Final</maven.validationApi.version>
 		<maven.jackson.jdk.dataType.jdk8>2.15.0-rc2</maven.jackson.jdk.dataType.jdk8>
@@ -17,18 +17,18 @@
 		<maven.cucumber.jvm.deps>1.0.6</maven.cucumber.jvm.deps>
 		<maven.junit.version>4.13.2</maven.junit.version>
 		<maven.cucumber.junit.version>7.13.0</maven.cucumber.junit.version>
-		<maven.testng.version>7.8.0</maven.testng.version>
+		<maven.testng.version>7.7.1</maven.testng.version>
 		<maven.cucumber.testng.version>7.13.0</maven.cucumber.testng.version>
-		<maven.cucumber.selenium.version>4.9.0</maven.cucumber.selenium.version>
-		<maven.cucumber.webdriver.version>5.3.2</maven.cucumber.webdriver.version>
+		<maven.cucumber.selenium.version>4.14.0</maven.cucumber.selenium.version>
+		<maven.cucumber.webdriver.version>5.5.3</maven.cucumber.webdriver.version>
 		<maven.compiler.plugin.version>3.11.0</maven.compiler.plugin.version>
 		<maven.surefire.plugin.version>3.0.0</maven.surefire.plugin.version>
 		<maven.fasterxml.jackson.version>2.15.0-rc3</maven.fasterxml.jackson.version>
 		<maven.allure.cucumber.jvm.version>2.23.0</maven.allure.cucumber.jvm.version>
 		<maven.extent.report.cucumber.adapter>1.13.0</maven.extent.report.cucumber.adapter>
 		<maven.extent.report.version>5.0.9</maven.extent.report.version>
-		<maven.lombok.version>1.18.26</maven.lombok.version>
-		<maven.spring.boot.version>3.0.6</maven.spring.boot.version>
+		<maven.lombok.version>1.18.42</maven.lombok.version>
+		<maven.spring.boot.version>4.0.1</maven.spring.boot.version>
 	</properties>
 	<build>
 		<plugins>
@@ -59,7 +59,7 @@
 			<!-- To Run Using JUnit from POM -->
 			<!-- N Feature files at a time / defined in threadCount attribute -->
 			<!-- R times retry mentioned in  rerunFailingTestsCount attribute -->
-			<plugin>
+			<!--<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>${maven.surefire.plugin.version}</version>
@@ -83,7 +83,7 @@
 						<allure.results.directory>${project.build.directory}/AllureReport</allure.results.directory>
 					</systemPropertyVariables>
 				</configuration>
-			</plugin>
+			</plugin>-->
 			<!-- To Run Using TestNG from POM -->
 			<!-- N Scenarios at a time / change data-provider-thread-count attribute 
 				value in testng.xml file -->

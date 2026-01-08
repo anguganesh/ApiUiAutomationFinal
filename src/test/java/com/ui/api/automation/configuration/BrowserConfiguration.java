@@ -3,6 +3,7 @@ package com.ui.api.automation.configuration;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import org.apache.hc.core5.http.ContentType;
+import org.springframework.beans.BeansException;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import com.aventstack.extentreports.MediaEntityBuilder;
@@ -14,7 +15,6 @@ import com.ui.api.automation.config.datapath.ApiJsonFilePath;
 import com.ui.api.automation.config.datapath.ApiYamlFilePath;
 import com.ui.api.automation.config.datapath.UiJsonFilePath;
 import com.ui.api.automation.config.datapath.UiYamlFilePath;
-import com.ui.api.automation.configuration.Hooks;
 import com.ui.automation.helpers.ApiCommonFunctions;
 
 import io.cucumber.java.After;
@@ -46,13 +46,17 @@ public class BrowserConfiguration {
 	
 	@Before(order = 0)
 	public void configureFilePathLocation()  {
-		ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(ObjectConfig.class);
-		this.uiYamlFilePath = context.getBean(UiYamlFilePath.class); 
-		this.uiJsonFilePath = context.getBean(UiJsonFilePath.class);
-		this.apiYamlFilePath = context.getBean(ApiYamlFilePath.class);
-		this.apiJsonFilePath = context.getBean(ApiJsonFilePath.class);
-		this.apiEndPointDetails = context.getBean(ApiEndPointDetails.class);
-		this.apiData = context.getBean(ApiData.class);
+		try (ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(ObjectConfig.class)) {
+			this.uiYamlFilePath = context.getBean(UiYamlFilePath.class); 
+			this.uiJsonFilePath = context.getBean(UiJsonFilePath.class);
+			this.apiYamlFilePath = context.getBean(ApiYamlFilePath.class);
+			this.apiJsonFilePath = context.getBean(ApiJsonFilePath.class);
+			this.apiEndPointDetails = context.getBean(ApiEndPointDetails.class);
+			this.apiData = context.getBean(ApiData.class);
+		} catch (BeansException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		hooks.setFilePathLocation(this.uiYamlFilePath, this.uiJsonFilePath);
 		
 		apiCommonFunctions.setApiDetails(this.apiYamlFilePath, this.apiJsonFilePath,
@@ -62,7 +66,7 @@ public class BrowserConfiguration {
 	@Before("@UI")
 	public void openBrowser(Scenario scenario) {			
 		System.out.println("scenario Name : " + scenario.getName());
-		System.out.println("Thread : " + Thread.currentThread().getId());
+		System.out.println("Thread : " + Thread.currentThread().threadId());
     	System.out.println("Driver Address Initial : " + hooks.getDriver());
 
     	hooks.launchBrowser();

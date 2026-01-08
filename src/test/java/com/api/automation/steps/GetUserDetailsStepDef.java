@@ -4,16 +4,13 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import org.junit.Assert;
-
 import com.api.automation.model.GetResponseUserDetails;
 import com.ui.api.automation.common.enums.ApiEnumerations;
 import com.ui.automation.helpers.ApiCommonFunctions;
 import com.ui.automation.helpers.JsonHelper;
 import com.ui.automation.helpers.YamlHelper;
-
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.restassured.response.Response;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -51,7 +48,7 @@ public class GetUserDetailsStepDef extends BaseApiStepDef {
 	@Then("Verify response data for userDetails endpoint")
 	public void verifyResponseData() {
 
-		getResponseUserDetailsFromApi = super.response.getBody().as(GetResponseUserDetails.class);
+		getResponseUserDetailsFromApi = BaseApiStepDef.response.getBody().as(GetResponseUserDetails.class);
 		try {
 			getResponseUserDetailsFromFile = super.yamlHelper.readYamlToPojo(GetResponseUserDetails.class,
 					super.apiYamlFilePath.getUserDetailsGetResponseYamlFilePath());

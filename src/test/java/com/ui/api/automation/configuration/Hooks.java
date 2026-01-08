@@ -13,16 +13,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import com.ui.api.automation.config.datapath.ApiData;
-import com.ui.api.automation.config.datapath.ApiEndPointDetails;
-import com.ui.api.automation.config.datapath.ApiJsonFilePath;
-import com.ui.api.automation.config.datapath.ApiYamlFilePath;
 import com.ui.api.automation.config.datapath.UiJsonFilePath;
 import com.ui.api.automation.config.datapath.UiYamlFilePath;
 import com.ui.automation.helpers.YamlHelper;
 import com.ui.automation.model.BrowserDetailsModel;
-
 import io.cucumber.java.Scenario;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import lombok.extern.slf4j.Slf4j;
@@ -76,6 +70,7 @@ public class Hooks {
 		}
 	}
 
+	@SuppressWarnings("deprecation")
 	public void setChromeDriver() {
 		ChromeOptions chromeOptions = new ChromeOptions();
 		chromeOptions.addArguments("enable-automation");

@@ -13,7 +13,7 @@ public class Retry implements IRetryAnalyzer {
 	public Retry() {
 		// TODO Auto-generated constructor stub
 		this.minRetry = 0;
-		this.maxRetry = 2;
+		this.maxRetry = 1;
 	}
 	
 	@Override

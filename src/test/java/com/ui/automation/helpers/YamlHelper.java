@@ -7,15 +7,11 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import org.yaml.snakeyaml.Yaml;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.CollectionType;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 import com.fasterxml.jackson.annotation.JsonInclude;
-
-import io.cucumber.java.it.Ma;
 
 public class YamlHelper {
 
@@ -34,6 +30,7 @@ public class YamlHelper {
 		return yamlMapper.readValue(new FileInputStream(filePath), listType);
 	}
 
+	@SuppressWarnings("unchecked")
 	public <T> Map<String, T> readYamlToMap(Class<T> clazz, String filePath) throws IOException {
 		return (Map<String, T>) yamlMapper.readValue(new FileInputStream(filePath), clazz);
 	}

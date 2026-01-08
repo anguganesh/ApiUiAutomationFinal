@@ -1,13 +1,9 @@
 package com.ui.automation.pages;
 
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-
-import com.ui.api.automation.common.enums.ApplicationInputs;
-import com.ui.api.automation.common.enums.WebElementAttributes;
 import com.ui.api.automation.configuration.Hooks;
 import com.ui.automation.model.LoginDataModel;
 import com.ui.automation.helpers.CommonFunctions;
@@ -42,9 +38,9 @@ public class LoginPage extends BasePage {
 		System.out.println(driver.getTitle());
 	}
 
-	public void clickElement() {
-		//this.newWebElement.click();
-	}
 	
+	public void clickElement() {
+		this.newWebElement.click();
+	}
 		
 }

@@ -1,21 +1,15 @@
 package com.ui.automation.helpers;
 
 import java.time.Duration;
-import java.time.temporal.TemporalUnit;
 import java.util.List;
-import java.util.Objects;
-import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import com.ui.api.automation.common.enums.ApplicationInputs;
 import com.ui.api.automation.common.enums.WebElementAttributes;
 import com.ui.api.automation.configuration.Hooks;
-
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -26,7 +20,6 @@ public class VisibilityHelper {
 
 	  public VisibilityHelper(Hooks hook) {
 	    this.hook = hook;
-
 	  }
 
 	  /**

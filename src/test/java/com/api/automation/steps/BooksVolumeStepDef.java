@@ -3,16 +3,11 @@ package com.api.automation.steps;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-
 import org.junit.Assert;
-
 import com.api.automation.model.BooksVolumeResponse;
-import com.ui.api.automation.config.datapath.ApiData;
-import com.ui.api.automation.configuration.Hooks;
 import com.ui.automation.helpers.ApiCommonFunctions;
 import com.ui.automation.helpers.JsonHelper;
 import com.ui.automation.helpers.YamlHelper;
-
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.restassured.response.Response;

@@ -16,6 +16,7 @@ public class CommonFunctions {
 		this.visibilityHelper = visibilityHelper;
 	}
 
+	@SuppressWarnings("null")
 	public void highlightElement(WebElement element) {
 		WebDriver driver = null;
 		JavascriptExecutor js = (JavascriptExecutor) driver;

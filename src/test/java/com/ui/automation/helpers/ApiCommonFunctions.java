@@ -6,16 +6,11 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import javax.validation.constraints.NotNull;
-
 import org.hamcrest.Matchers;
-
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ui.api.automation.config.datapath.ApiData;
 import com.ui.api.automation.config.datapath.ApiEndPointDetails;
 import com.ui.api.automation.config.datapath.ApiJsonFilePath;
 import com.ui.api.automation.config.datapath.ApiYamlFilePath;
-
 import io.qameta.allure.Allure;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -60,6 +55,9 @@ public class ApiCommonFunctions {
 		this.response.then().log().all().assertThat()
 				.time(Matchers.lessThan(Long.parseLong(this.apiData.getRestApiResponseTime())), TimeUnit.SECONDS)
 				.extract().response();
+		
+
+		
 		return this.response;
 
 	}

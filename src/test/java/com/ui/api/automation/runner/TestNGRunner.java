@@ -2,7 +2,6 @@ package com.ui.api.automation.runner;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.DataProvider;
 
@@ -22,7 +21,7 @@ import org.testng.annotations.DataProvider;
 		monochrome = true, 
 		publish = true, 
 		dryRun = false,
-		tags = "@UI"
+		tags = "@Billing"
 
 )
 

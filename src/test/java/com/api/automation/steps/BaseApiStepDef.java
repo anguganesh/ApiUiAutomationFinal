@@ -4,11 +4,9 @@ import com.ui.api.automation.config.datapath.ApiData;
 import com.ui.api.automation.config.datapath.ApiEndPointDetails;
 import com.ui.api.automation.config.datapath.ApiJsonFilePath;
 import com.ui.api.automation.config.datapath.ApiYamlFilePath;
-import com.ui.api.automation.configuration.Hooks;
 import com.ui.automation.helpers.ApiCommonFunctions;
 import com.ui.automation.helpers.JsonHelper;
 import com.ui.automation.helpers.YamlHelper;
-
 import io.restassured.response.Response;
 
 public class BaseApiStepDef {	

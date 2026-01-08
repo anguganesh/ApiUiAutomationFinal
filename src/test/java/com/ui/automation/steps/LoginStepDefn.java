@@ -32,7 +32,7 @@ public class LoginStepDefn extends BaseStepDefn {
 		System.out.println("InputLoginData " + inputLoginData);
 		loginPage.login(inputLoginData);
 		System.out.println("Executed in User has to login first");
-		loginPage.clickElement();
+	//	loginPage.clickElement();
 		System.out.println("completed successfully");
 	}
 
