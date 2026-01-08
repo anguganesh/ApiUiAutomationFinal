@@ -14,5 +14,6 @@ public class ListPrice {
 
 	Float amount;
 	String currencyCode;
+	Integer amountInMicros;
 	
 }

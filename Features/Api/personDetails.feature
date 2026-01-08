@@ -16,7 +16,7 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-@tag @APITest
+@tag @API
 Feature: Get User details using GET endpoint
   
 

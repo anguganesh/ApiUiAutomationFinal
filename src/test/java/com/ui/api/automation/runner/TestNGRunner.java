@@ -21,7 +21,7 @@ import org.testng.annotations.DataProvider;
 		monochrome = true, 
 		publish = true, 
 		dryRun = false,
-		tags = "@Billing"
+		tags = "@API"
 
 )
 

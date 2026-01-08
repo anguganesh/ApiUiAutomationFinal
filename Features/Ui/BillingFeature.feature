@@ -1,4 +1,4 @@
-@Billing 
+@Billing @UI 
 Feature: Billing Feature Testing
   
   Background:

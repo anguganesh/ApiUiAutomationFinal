@@ -14,5 +14,6 @@ public class RetailPrice {
 
 	Float amount;
 	String currencyCode;
+	Integer amountInMicros;
 	
 }

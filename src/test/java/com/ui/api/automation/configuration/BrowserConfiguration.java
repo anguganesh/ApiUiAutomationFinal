@@ -22,7 +22,6 @@ import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import io.qameta.allure.Allure;
 
-
 public class BrowserConfiguration {
 
 	public final Hooks hooks;
@@ -34,20 +33,19 @@ public class BrowserConfiguration {
 	private ApiJsonFilePath apiJsonFilePath;
 	private ApiEndPointDetails apiEndPointDetails;
 	private ApiData apiData;
-	
-	public BrowserConfiguration(Hooks hooks,
-			 ApiCommonFunctions apiCommonFunctions,
-			 ReportsConfiguration allureReportConfiguration) {
+
+	public BrowserConfiguration(Hooks hooks, ApiCommonFunctions apiCommonFunctions,
+			ReportsConfiguration allureReportConfiguration) {
 		// TODO Auto-generated constructor stub
 		this.hooks = hooks;
 		this.apiCommonFunctions = apiCommonFunctions;
 		this.reportConfiguration = allureReportConfiguration;
 	}
-	
+
 	@Before(order = 0)
-	public void configureFilePathLocation()  {
+	public void configureFilePathLocation() {
 		try (ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(ObjectConfig.class)) {
-			this.uiYamlFilePath = context.getBean(UiYamlFilePath.class); 
+			this.uiYamlFilePath = context.getBean(UiYamlFilePath.class);
 			this.uiJsonFilePath = context.getBean(UiJsonFilePath.class);
 			this.apiYamlFilePath = context.getBean(ApiYamlFilePath.class);
 			this.apiJsonFilePath = context.getBean(ApiJsonFilePath.class);
@@ -58,37 +56,43 @@ public class BrowserConfiguration {
 			e.printStackTrace();
 		}
 		hooks.setFilePathLocation(this.uiYamlFilePath, this.uiJsonFilePath);
-		
-		apiCommonFunctions.setApiDetails(this.apiYamlFilePath, this.apiJsonFilePath,
-										 this.apiEndPointDetails, this.apiData);
+
+		apiCommonFunctions.setApiDetails(this.apiYamlFilePath, this.apiJsonFilePath, this.apiEndPointDetails,
+				this.apiData);
 	}
-	
-	@Before("@UI")
-	public void openBrowser(Scenario scenario) {			
+
+	@Before()
+	public void openBrowser(Scenario scenario) {
 		System.out.println("scenario Name : " + scenario.getName());
-		System.out.println("Thread : " + Thread.currentThread().threadId());
-    	System.out.println("Driver Address Initial : " + hooks.getDriver());
 
-    	hooks.launchBrowser();
-		System.out.println("Driver Address after creating : " + hooks.getDriver());
+		if (scenario.getSourceTagNames().toString().contains("@UI")) {
+			System.out.println("Thread : " + Thread.currentThread().threadId());
+			System.out.println("Driver Address Initial : " + hooks.getDriver());
+			hooks.launchBrowser();
+			System.out.println("Driver Address after creating : " + hooks.getDriver());
+
+		}
+
+		System.out.println(scenario.getSourceTagNames().contains(scenario));
+
 	}
 
-	@After("@UI")
+	@After()
 	public void closeBrowser(Scenario scenario) throws IOException {
 		System.out.println("Executing CloseBrowser Method");
-		if(scenario.isFailed())  {
-			hooks.copyScreenshotAsFile(scenario);
-			scenario.attach(hooks.getScreenshotAsBytes(), ContentType.IMAGE_PNG.toString(), scenario.getName());			
-			ExtentCucumberAdapter.getCurrentStep().log(Status.FAIL, MediaEntityBuilder.createScreenCaptureFromBase64String(hooks.getBase64StringOfScreenshot()).build());
-			Allure.addAttachment("Screenshot for test failure for scenario: " + scenario.getName(), 
-					new ByteArrayInputStream(reportConfiguration.takesScreenshotForAllureReport()));
+		if (scenario.getSourceTagNames().toString().contains("@UI")) {
+			if (scenario.isFailed()) {
+				hooks.copyScreenshotAsFile(scenario);
+				scenario.attach(hooks.getScreenshotAsBytes(), ContentType.IMAGE_PNG.toString(), scenario.getName());
+				ExtentCucumberAdapter.getCurrentStep().log(Status.FAIL, MediaEntityBuilder
+						.createScreenCaptureFromBase64String(hooks.getBase64StringOfScreenshot()).build());
+				Allure.addAttachment("Screenshot for test failure for scenario: " + scenario.getName(),
+						new ByteArrayInputStream(reportConfiguration.takesScreenshotForAllureReport()));
+			}
+
+			hooks.closeBrowser();
 		}
-		     	
-		
-		hooks.closeBrowser();
+
 	}
-
-
-	
 
 }

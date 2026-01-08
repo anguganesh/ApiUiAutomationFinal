@@ -14,5 +14,6 @@ public class Epub {
 
 	Boolean isAvailable;
 	String downloadLink;
+	String acsTokenLink;
 	
 }
