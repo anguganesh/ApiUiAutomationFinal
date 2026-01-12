@@ -4,8 +4,6 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
-
-import javax.validation.constraints.NotNull;
 import org.hamcrest.Matchers;
 import com.ui.api.automation.config.datapath.ApiData;
 import com.ui.api.automation.config.datapath.ApiEndPointDetails;
@@ -15,6 +13,7 @@ import io.qameta.allure.Allure;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import jakarta.validation.constraints.NotNull;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j

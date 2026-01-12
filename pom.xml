@@ -10,7 +10,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>24</java.version>
 		<maven.restAssured.version>6.0.0</maven.restAssured.version>
-		<maven.validationApi.version>2.0.1.Final</maven.validationApi.version>
+		<maven.validationApi.version>4.0.0-M1</maven.validationApi.version>
 		<maven.jackson.jdk.dataType.jdk8>2.20.1</maven.jackson.jdk.dataType.jdk8>
 		<maven.gherkin.version>26.0.0</maven.gherkin.version>
 		<maven.cucumber.version>7.13.0</maven.cucumber.version>
@@ -151,8 +151,8 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>javax.validation</groupId>
-			<artifactId>validation-api</artifactId>
+			<groupId>jakarta.validation</groupId>
+			<artifactId>jakarta.validation-api</artifactId>
 			<version>${maven.validationApi.version}</version>
 		</dependency>
 		<!-- End of RestAssured -->
