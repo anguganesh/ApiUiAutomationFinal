@@ -9,21 +9,21 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>24</java.version>
-		<maven.restAssured.version>5.3.0</maven.restAssured.version>
+		<maven.restAssured.version>6.0.0</maven.restAssured.version>
 		<maven.validationApi.version>2.0.1.Final</maven.validationApi.version>
-		<maven.jackson.jdk.dataType.jdk8>2.15.0-rc2</maven.jackson.jdk.dataType.jdk8>
+		<maven.jackson.jdk.dataType.jdk8>2.20.1</maven.jackson.jdk.dataType.jdk8>
 		<maven.gherkin.version>26.0.0</maven.gherkin.version>
 		<maven.cucumber.version>7.13.0</maven.cucumber.version>
 		<maven.cucumber.jvm.deps>1.0.6</maven.cucumber.jvm.deps>
 		<maven.junit.version>4.13.2</maven.junit.version>
 		<maven.cucumber.junit.version>7.13.0</maven.cucumber.junit.version>
-		<maven.testng.version>7.7.1</maven.testng.version>
+		<maven.testng.version>7.11.0</maven.testng.version>
 		<maven.cucumber.testng.version>7.13.0</maven.cucumber.testng.version>
-		<maven.cucumber.selenium.version>4.14.0</maven.cucumber.selenium.version>
-		<maven.cucumber.webdriver.version>5.5.3</maven.cucumber.webdriver.version>
-		<maven.compiler.plugin.version>3.11.0</maven.compiler.plugin.version>
-		<maven.surefire.plugin.version>3.0.0</maven.surefire.plugin.version>
-		<maven.fasterxml.jackson.version>2.15.0-rc3</maven.fasterxml.jackson.version>
+		<maven.cucumber.selenium.version>4.39.0</maven.cucumber.selenium.version>
+		<maven.cucumber.webdriver.version>6.3.3</maven.cucumber.webdriver.version>
+		<maven.compiler.plugin.version>3.14.1</maven.compiler.plugin.version>
+		<maven.surefire.plugin.version>3.5.4</maven.surefire.plugin.version>
+		<maven.fasterxml.jackson.version>2.20.1</maven.fasterxml.jackson.version>
 		<maven.allure.cucumber.jvm.version>2.23.0</maven.allure.cucumber.jvm.version>
 		<maven.extent.report.cucumber.adapter>1.13.0</maven.extent.report.cucumber.adapter>
 		<maven.extent.report.version>5.0.9</maven.extent.report.version>

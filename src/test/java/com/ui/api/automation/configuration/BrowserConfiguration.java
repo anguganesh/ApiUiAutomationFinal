@@ -72,9 +72,6 @@ public class BrowserConfiguration {
 			System.out.println("Driver Address after creating : " + hooks.getDriver());
 
 		}
-
-		System.out.println(scenario.getSourceTagNames().contains(scenario));
-
 	}
 
 	@After()

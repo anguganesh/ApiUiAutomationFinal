@@ -84,8 +84,6 @@ public class LoginStepDefn extends BaseStepDefn {
 
 		try {
 			String filepath = super.uiYamlFilePath.getLoginYamlFilePath();
-			System.out.println("Login File Path" + filepath);
-			System.out.println("Yaml Object : " + yamlHelper);
 			inputLoginData = yamlHelper.readYamlToPojo(LoginDataModel.class, filepath);
 			System.out.println("Application Properties Address : " + super.uiYamlFilePath);
 			System.out.println("Application Properties Address : " + super.uiJsonFilePath);
